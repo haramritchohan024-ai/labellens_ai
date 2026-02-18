@@ -1,0 +1,86 @@
+[
+    {
+        "category": "Chips",
+        "alternatives": [
+            {
+                "name": "Baked Veggie Chips",
+                "whyBetter": "Less oil, no artificial flavors",
+                "additiveReduction": "-4 additives",
+                "cost": "₹₹",
+                "nutrition": "Lower fat",
+                "score": 8
+            },
+            {
+                "name": "Salted Popcorn (Homemade type)",
+                "whyBetter": "Whole grain, no preservatives",
+                "additiveReduction": "-6 additives",
+                "cost": "₹",
+                "nutrition": "High fiber",
+                "score": 9
+            }
+        ]
+    },
+    {
+        "category": "Soft Drinks",
+        "alternatives": [
+            {
+                "name": "Sparkling Water with Fruit Juice",
+                "whyBetter": "No phosphoric acid, less sugar",
+                "additiveReduction": "-5 additives",
+                "cost": "₹₹",
+                "nutrition": "Lower sugar",
+                "score": 8
+            },
+            {
+                "name": "Coconut Water",
+                "whyBetter": "Natural electrolytes",
+                "additiveReduction": "-8 additives",
+                "cost": "₹₹",
+                "nutrition": "Natural sugar",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "category": "Biscuits",
+        "alternatives": [
+            {
+                "name": "Whole Wheat Jaggery Cookies",
+                "whyBetter": "No refined flour/sugar",
+                "additiveReduction": "-3 additives",
+                "cost": "₹₹",
+                "nutrition": "Fiber rich",
+                "score": 7
+            },
+            {
+                "name": "Oatmeal Cookies",
+                "whyBetter": "High fiber",
+                "additiveReduction": "-2 additives",
+                "cost": "₹₹",
+                "nutrition": "Fiber rich",
+                "score": 7
+            }
+        ]
+    },
+    {
+        "category": "Sauces",
+        "alternatives": [
+            {
+                "name": "Homemade Tomato Salsa",
+                "whyBetter": "Fresh ingredients, no preservatives",
+                "additiveReduction": "-5 additives",
+                "cost": "₹",
+                "nutrition": "Vitamin rich",
+                "score": 9
+            },
+            {
+                "name": "Organic Ketchup",
+                "whyBetter": "No HFCS",
+                "additiveReduction": "-2 additives",
+                "cost": "₹₹₹",
+                "nutrition": "Less sugar",
+                "score": 7
+            }
+        ]
+    }
+]

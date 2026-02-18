@@ -1,0 +1,433 @@
+[
+    {
+        "code": "E102",
+        "name": "Tartrazine",
+        "category": "Color",
+        "riskLevel": "High",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Hypersensitivity",
+            "Asthma",
+            "Child_Hyperactivity"
+        ],
+        "groupWarnings": {
+            "Child_Hyperactivity": "May cause hyperactivity in children.",
+            "Asthma": "Can trigger asthma attacks."
+        },
+        "description": "Yellow dye banned in some countries. Common in sweets and drinks."
+    },
+    {
+        "code": "E110",
+        "name": "Sunset Yellow FCF",
+        "category": "Color",
+        "riskLevel": "High",
+        "safetyStatus": "Restricted",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Allergy",
+            "Child_Hyperactivity"
+        ],
+        "notes": "Orange dye, potential carcinogen."
+    },
+    {
+        "code": "E129",
+        "name": "Allura Red AC",
+        "category": "Color",
+        "riskLevel": "High",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Hypersensitivity"
+        ],
+        "notes": "Red dye linked to hyperactivity."
+    },
+    {
+        "code": "E133",
+        "name": "Brilliant Blue FCF",
+        "category": "Color",
+        "riskLevel": "Medium",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Hypersensitivity"
+        ],
+        "notes": "Blue dye, generally considered safer but can cause reactions."
+    },
+    {
+        "code": "E150d",
+        "name": "Sulphite Ammonia Caramel",
+        "category": "Color",
+        "riskLevel": "High",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Gut",
+            "Carcinogen_Risk"
+        ],
+        "notes": "Found in colas. Contains 4-MEI."
+    },
+    {
+        "code": "E202",
+        "name": "Potassium Sorbate",
+        "category": "Preservative",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0.5,
+        "sensitivityTags": [],
+        "notes": "Mold inhibitor, generally safe."
+    },
+    {
+        "code": "E211",
+        "name": "Sodium Benzoate",
+        "category": "Preservative",
+        "riskLevel": "High",
+        "safetyStatus": "Restricted",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Hyperactivity",
+            "Asthma"
+        ],
+        "notes": "Can form benzene (carcinogen) with Vitamin C."
+    },
+    {
+        "code": "E220",
+        "name": "Sulphur Dioxide",
+        "category": "Preservative",
+        "riskLevel": "High",
+        "safetyStatus": "Restricted",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Asthma",
+            "Breathing_Diff"
+        ],
+        "notes": "Common in dried fruits/wine. Triggers asthma."
+    },
+    {
+        "code": "E250",
+        "name": "Sodium Nitrite",
+        "category": "Preservative",
+        "riskLevel": "High",
+        "safetyStatus": "Restricted",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Carcinogen_Risk"
+        ],
+        "notes": "Found in processed meats. Linked to cancer."
+    },
+    {
+        "code": "E300",
+        "name": "Ascorbic Acid",
+        "category": "Antioxidant",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [],
+        "notes": "Vitamin C. Safe."
+    },
+    {
+        "code": "E319",
+        "name": "TBHQ",
+        "category": "Antioxidant",
+        "riskLevel": "High",
+        "safetyStatus": "Restricted",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "DNA_Damage_Risk"
+        ],
+        "notes": "Pertroleum-based preservative. Limit intake."
+    },
+    {
+        "code": "E320",
+        "name": "BHA",
+        "category": "Antioxidant",
+        "riskLevel": "High",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Carcinogen_Risk",
+            "Endocrine_Disruptor"
+        ],
+        "notes": "Waxy solid used in fats/oils."
+    },
+    {
+        "code": "E321",
+        "name": "BHT",
+        "category": "Antioxidant",
+        "riskLevel": "High",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Carcinogen_Risk"
+        ],
+        "notes": "Related to BHA."
+    },
+    {
+        "code": "E322",
+        "name": "Lecithin",
+        "category": "Emulsifier",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [
+            "Soy_Allergy"
+        ],
+        "notes": "Usually from soy. Safe."
+    },
+    {
+        "code": "E330",
+        "name": "Citric Acid",
+        "category": "Acidity Regulator",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [
+            "Acid_Reflux"
+        ],
+        "notes": "Found in citrus fruits. Safe."
+    },
+    {
+        "code": "E407",
+        "name": "Carrageenan",
+        "category": "Thickener",
+        "riskLevel": "Medium",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Gut_Inflammation",
+            "IBS"
+        ],
+        "notes": "Seaweed extract. Can cause gut inflammation."
+    },
+    {
+        "code": "E412",
+        "name": "Guar Gum",
+        "category": "Thickener",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0.5,
+        "sensitivityTags": [
+            "Bloating"
+        ],
+        "notes": "Fiber from guar beans. High amounts cause gas."
+    },
+    {
+        "code": "E415",
+        "name": "Xanthan Gum",
+        "category": "Thickener",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0.5,
+        "sensitivityTags": [
+            "Bloating"
+        ],
+        "notes": "Fermented sugar. Safe."
+    },
+    {
+        "code": "E420",
+        "name": "Sorbitol",
+        "category": "Sweetener",
+        "riskLevel": "Medium",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Laxative_Effect",
+            "IBS"
+        ],
+        "notes": "Sugar alcohol. Can cause diarrhea."
+    },
+    {
+        "code": "E440",
+        "name": "Pectin",
+        "category": "Gelling Agent",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [],
+        "notes": "Fruit extract. Safe."
+    },
+    {
+        "code": "E450",
+        "name": "Diphosphates",
+        "category": "Emulsifier",
+        "riskLevel": "Medium",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Kidney"
+        ],
+        "notes": "High phosphate intake bad for kidneys/bones."
+    },
+    {
+        "code": "E471",
+        "name": "Mono- and Diglycerides of Fatty Acids",
+        "category": "Emulsifier",
+        "riskLevel": "Medium",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 1,
+        "sensitivityTags": [],
+        "notes": "Can contain trans fats."
+    },
+    {
+        "code": "E500",
+        "name": "Sodium Carbonate",
+        "category": "Raising Agent",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [],
+        "notes": "Soda ash. Safe."
+    },
+    {
+        "code": "E621",
+        "name": "Monosodium Glutamate",
+        "category": "Flavor Enhancer",
+        "riskLevel": "Medium",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Headache",
+            "Nausea",
+            "MSG_Sensitivity"
+        ],
+        "notes": "Savory taste. Triggers symptoms in some."
+    },
+    {
+        "code": "E627",
+        "name": "Disodium Guanylate",
+        "category": "Flavor Enhancer",
+        "riskLevel": "Medium",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Gout",
+            "Asthma"
+        ],
+        "notes": "Avoid if you have gout."
+    },
+    {
+        "code": "E631",
+        "name": "Disodium Inosinate",
+        "category": "Flavor Enhancer",
+        "riskLevel": "Medium",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Gout"
+        ],
+        "notes": "Often used with MSG."
+    },
+    {
+        "code": "E903",
+        "name": "Carnauba Wax",
+        "category": "Glazing Agent",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [],
+        "notes": "Palm wax. Safe."
+    },
+    {
+        "code": "E950",
+        "name": "Acesulfame K",
+        "category": "Sweetener",
+        "riskLevel": "High",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Insulin_Response"
+        ],
+        "notes": "Artificial sweetener."
+    },
+    {
+        "code": "E951",
+        "name": "Aspartame",
+        "category": "Sweetener",
+        "riskLevel": "High",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Headache",
+            "PKU"
+        ],
+        "notes": "Breakdown products include methanol. Not for PKU."
+    },
+    {
+        "code": "E955",
+        "name": "Sucralose",
+        "category": "Sweetener",
+        "riskLevel": "Medium",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Gut_Flora"
+        ],
+        "notes": "Splenda. May affect gut bacteria."
+    },
+    {
+        "code": "E960",
+        "name": "Steviol Glycosides",
+        "category": "Sweetener",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [],
+        "notes": "From Stevia plant. Safe."
+    },
+    {
+        "code": "INS 150d",
+        "name": "Sulphite Ammonia Caramel",
+        "category": "Color",
+        "riskLevel": "High",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 2,
+        "sensitivityTags": [
+            "Gut",
+            "Carcinogen_Risk"
+        ],
+        "notes": "Same as E150d."
+    },
+    {
+        "code": "INS 330",
+        "name": "Citric Acid",
+        "category": "Acidity Regulator",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [],
+        "notes": "Same as E330."
+    },
+    {
+        "code": "INS 471",
+        "name": "Mono- and Diglycerides",
+        "category": "Emulsifier",
+        "riskLevel": "Medium",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 1,
+        "sensitivityTags": [],
+        "notes": "Same as E471."
+    },
+    {
+        "code": "INS 500",
+        "name": "Sodium BiCarbonate",
+        "category": "Raising Agent",
+        "riskLevel": "Low",
+        "safetyStatus": "Permitted",
+        "scorePenalty": 0,
+        "sensitivityTags": [],
+        "notes": "Baking soda."
+    },
+    {
+        "code": "INS 621",
+        "name": "MSG",
+        "category": "Flavor Enhancer",
+        "riskLevel": "Medium",
+        "safetyStatus": "Controversial",
+        "scorePenalty": 1,
+        "sensitivityTags": [
+            "Headache",
+            "MSG_Sensitivity"
+        ],
+        "notes": "Same as E621."
+    }
+]
