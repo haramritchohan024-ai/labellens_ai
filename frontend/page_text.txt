@@ -1,0 +1,39 @@
+LabelLens.AI
+Home
+Scan
+History
+About
+AI-POWERED FOOD INTELLIGENCE
+Scan Labels.
+Decode Additives.
+Know the Risks.
+
+Instantly identify hidden E-numbers, check BIS/FSSAI compliance, and get a Label Transparency Score.
+
+Scan Label
+How it Works
+TRANSPARENCY SCORE
+
+8.5
+
+DETECTED
+
+E621 (MSG)
+
+Why LabelLens?
+
+Regulatory compliance and safety checks for the modern consumer.
+
+Instant Decoding
+
+Our OCR identifies E-numbers (e.g., E102, INS 211) and hidden chemical names instantly.
+
+BIS & FSSAI Checks
+
+See which additives are permitted, restricted, or require warning labels under Indian regulations.
+
+Transparency Score
+
+We rate the label's clarity. Vague terms like "flavours" or "edible oil" lower the score.
+
+© 2026 LabelLens AI. Made with 🥬 for healthier choices.

@@ -1,95 +1,84 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { Clock, Loader } from 'lucide-react';
+import { History as HistoryIcon, ShieldCheck, Target, Loader2, Navigation } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import HistoryCard from '../components/HistoryCard';
 
-const History = () => {
+const ScanHistory = () => {
+    const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(true);
     const [history, setHistory] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchHistory = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/history');
-                setHistory(res.data);
+                const res = await axios.get('http://localhost:5000/api/user/history');
+                if (res.data.success) {
+                    setHistory(res.data.history);
+                }
             } catch (error) {
-                console.error('Failed to load history', error);
+                console.error("History fetch error:", error);
             } finally {
-                setLoading(false);
+                setIsLoading(false);
             }
         };
+
         fetchHistory();
     }, []);
 
-    // Prepare chart data (reverse to show chronological logic if needed, or by index)
-    const chartData = history.slice().reverse().map((item, index) => ({
-        name: `Scan ${index + 1}`,
-        score: item.safetyScore,
-        date: new Date(item.createdAt).toLocaleDateString()
-    }));
-
-    if (loading) return (
-        <div className="flex justify-center items-center min-h-screen">
-            <Loader className="animate-spin text-green-600" size={40} />
-        </div>
-    );
+    if (isLoading) {
+        return (
+            <div className="min-h-screen pt-32 flex items-center justify-center">
+                <Loader2 className="w-12 h-12 text-brand-500 animate-spin" />
+            </div>
+        );
+    }
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-12">
-            <h1 className="text-3xl font-bold text-gray-800 mb-8 flex items-center">
-                <Clock className="mr-3" /> Scan History
-            </h1>
+        <div className="min-h-screen pt-28 pb-32 px-4 sm:px-6 lg:px-8 bg-gray-50/50">
+            <div className="max-w-4xl mx-auto space-y-8">
 
-            {/* Chart Section */}
-            {history.length > 1 && (
-                <div className="bg-white p-6 rounded-xl shadow-lg mb-8">
-                    <h3 className="text-lg font-semibold text-gray-700 mb-4">Safety Score Trend</h3>
-                    <div className="h-64 w-full">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <LineChart data={chartData}>
-                                <XAxis dataKey="date" hide />
-                                <YAxis domain={[0, 10]} />
-                                <Tooltip />
-                                <Line type="monotone" dataKey="score" stroke="#16a34a" strokeWidth={3} dot={{ r: 4 }} />
-                            </LineChart>
-                        </ResponsiveContainer>
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-gray-100 pb-6">
+                    <div>
+                        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 flex items-center gap-3">
+                            <HistoryIcon className="text-brand-500" /> Scan History
+                        </h1>
+                        <p className="text-gray-500 font-medium">A complete log of every product ingredient breakdown you've reviewed.</p>
                     </div>
                 </div>
-            )}
 
-            {/* List Section */}
-            <div className="bg-white shadow rounded-lg overflow-hidden">
-                <ul className="divide-y divide-gray-200">
-                    {history.length === 0 ? (
-                        <li className="p-8 text-center text-gray-500">No scans yet. Go scan something!</li>
-                    ) : (
-                        history.map((item) => (
-                            <li key={item._id} className="p-6 hover:bg-gray-50 transition">
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <p className="font-medium text-gray-900 truncate max-w-md">
-                                            {item.detectedAdditives.length > 0
-                                                ? `Found: ${item.detectedAdditives.map(a => a.name).join(', ')}`
-                                                : 'No additives detected'}
-                                        </p>
-                                        <p className="text-sm text-gray-500">
-                                            {new Date(item.createdAt).toLocaleString()}
-                                        </p>
-                                    </div>
-                                    <div className={`
-                                        flex items-center justify-center w-12 h-12 rounded-full font-bold text-lg text-white
-                                        ${item.safetyScore >= 8 ? 'bg-green-500' : item.safetyScore >= 5 ? 'bg-yellow-500' : 'bg-red-500'}
-                                    `}>
-                                        {item.safetyScore?.toFixed(0) || '-'}
-                                    </div>
-                                </div>
-                            </li>
-                        ))
-                    )}
-                </ul>
+                {history.length > 0 ? (
+                    <div className="space-y-4">
+                        {history.map((item, index) => (
+                            <HistoryCard
+                                key={item._id}
+                                item={item}
+                                index={index}
+                                onClick={() => navigate(`/history/${item._id}`)}
+                            />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="pt-20 text-center flex flex-col items-center">
+                        <div className="bg-brand-50 p-6 rounded-full inline-block mb-6">
+                            <HistoryIcon className="w-12 h-12 text-brand-300" />
+                        </div>
+                        <h2 className="text-2xl font-bold text-gray-900 mb-2">No History Recorded</h2>
+                        <p className="text-gray-500 max-w-md mx-auto mb-8 font-medium">
+                            It looks like you haven't run any diagnostic scans yet. Take a picture of an ingredient list to begin analyzing safety risks!
+                        </p>
+                        <button
+                            onClick={() => navigate('/scan')}
+                            className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white transition-all duration-300 bg-brand-500 hover:bg-brand-600 rounded-full shadow-[0_10px_20px_rgba(34,197,94,0.3)] hover:shadow-[0_10px_25px_rgba(34,197,94,0.4)]"
+                        >
+                            <Navigation className="w-5 h-5 fill-current" />
+                            Start Scanning Now
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );
 };
 
-export default History;
+export default ScanHistory;

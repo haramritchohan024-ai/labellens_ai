@@ -1,0 +1,36 @@
+[
+  {
+    "_id": "699cb1fe11945305e49e7dd8",
+    "name": "NutriGlow Original Milk",
+    "brand": "NutriGlow",
+    "category": "699cb1fe11945305e49e7dd6",
+    "subcategory": "Milk",
+    "ingredients": [
+      "Water",
+      "Base ingredient",
+      "TBHQ",
+      "Xanthan Gum (E415)",
+      "Natural Flavors"
+    ],
+    "additives": [
+      "TBHQ",
+      "Xanthan Gum (E415)",
+      "Natural Flavors"
+    ],
+    "riskScore": 40,
+    "riskLevel": "moderate",
+    "description": "Balancing flavor and shelf-life with common preservatives.",
+    "imageUrl": "https://image.pollinations.ai/prompt/grocery%20product%20photography%20of%20milk%20bottle%20dairy?width=400&height=400&nologo=true",
+    "highlights": [],
+    "benefits": [],
+    "dietaryTags": [],
+    "cleanLabel": false,
+    "additiveRisk": 0,
+    "sugarRisk": 0,
+    "artificialRisk": 0,
+    "alternatives": [],
+    "__v": 0,
+    "createdAt": "2026-02-23T20:01:02.417Z",
+    "updatedAt": "2026-02-23T20:01:02.417Z"
+  }
+]

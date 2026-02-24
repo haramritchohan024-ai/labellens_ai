@@ -6,6 +6,8 @@ const fs = require('fs');
 const { extractTextFromImage } = require('../services/ocrService');
 const { analyzeProduct } = require('../services/analysisService');
 const ScanResult = require('../models/ScanResult');
+const { analyzeSafety } = require('../controllers/safetyController');
+const { protect, optionalAuth } = require('../middleware/authMiddleware');
 
 // Multer Config
 const storage = multer.diskStorage({
@@ -55,25 +57,23 @@ router.post('/analyze', async (req, res) => {
     }
 });
 
-// History Endpoints
-router.get('/history', async (req, res) => {
-    try {
-        const history = await ScanResult.find().sort({ createdAt: -1 });
-        res.json(history);
-    } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch history' });
-    }
-});
+// New Safety Analysis Endpoint
+router.post('/analyze-safety', optionalAuth, analyzeSafety);
 
-router.post('/history/save', async (req, res) => {
-    try {
-        const result = new ScanResult(req.body);
-        await result.save();
-        res.json(result);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Failed to save history' });
-    }
-});
+// Products & Alternatives Endpoints
+// Products & Alternatives Endpoints
+router.use('/products', require('./productRoutes'));
+
+// Auth Endpoints
+router.use('/auth', require('./authRoutes'));
+
+// Report Endpoints
+router.use('/reports', require('./reportRoutes'));
+
+// Scanner & Real Alternatives Endpoints
+router.use('/scan', require('./scannerRoutes'));
+
+// User Data & Dashboard Endpoints - OPTIONAL PROTECTED (Public Fallback)
+router.use('/user', optionalAuth, require('./userRoutes'));
 
 module.exports = router;
