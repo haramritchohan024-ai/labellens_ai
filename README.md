@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # LabelLens AI
 
 An AI-powered tool to decode food labels, identify hidden additives, and provide personalized health warnings.
