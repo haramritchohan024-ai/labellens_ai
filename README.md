@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LabelLens AI
 
 An AI-powered tool to decode food labels, identify hidden additives, and provide personalized health warnings.
@@ -27,3 +28,7 @@ An AI-powered tool to decode food labels, identify hidden additives, and provide
 - OCR Scan for ingredients.
 - Additive Detection & Safety Scoring.
 - Personalized Health warnings.
+=======
+# labellens_ai
+LabelLens.AI is a smart web platform that helps consumers decode complex ingredient lists in packaged foods and make safer, more informed decisions. Using OCR technology, it scans product labels, extracts ingredient text, and analyses additives such as preservatives, synthetic colours, emulsifiers, and hidden chemicals.
+>>>>>>> bfe2c0a50f4ec29fb9a8517d80257f8794b3124c
